@@ -1,0 +1,268 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 80px 20px 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+a {
+  color: #facc15;
+}
+
+section {
+  scroll-margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+/* Menu navigasi */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 16px;
+  background-color: #0f172a;
+  border-bottom: 1px solid #1e293b;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.navbar nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.navbar nav a:hover {
+  color: #38bdf8;
+}
+
+/* Foto profil */
+.foto {
+  display: block;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  margin: 20px 0;
+}
+
+/* Tombol */
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tombol-cv {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tombol-wadah {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+/* Kartu proyek */
+.kartu-wadah {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.kartu {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.kartu h3 {
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.kartu:hover {
+  background-color: #334155;
+}
+
+/* Ikon kontak */
+.kontak-wadah {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.ikon-kontak {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #1e293b;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.ikon-kontak:hover {
+  background-color: #334155;
+  transform: translateY(-4px);
+}
+
+/* Warna asli ikon */
+.ikon-kontak[aria-label="Email"] {
+  color: #ea4335;
+}
+
+.ikon-kontak[aria-label="WhatsApp"] {
+  color: #25d366;
+}
+
+.ikon-kontak[aria-label="Instagram"] i {
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ikon-kontak[aria-label="GitHub"] {
+  color: #ffffff;
+}
+
+/* Tombol kembali ke atas */
+#ke-atas {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+#ke-atas.tampil {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animasi muncul saat scroll */
+.muncul {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+.muncul.terlihat {
+  opacity: 1;
+  transform: none;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Tema terang */
+body.terang {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+body.terang h1 {
+  color: #000000;
+}
+
+body.terang .navbar {
+  background-color: #f8fafc;
+  border-bottom-color: #e2e8f0;
+}
+
+body.terang .navbar nav a {
+  color: #475569;
+}
+
+body.terang .navbar nav a:hover {
+  color: #0284c7;
+}
+
+body.terang .foto {
+  border-color: #000000;
+}
+
+body.terang .kartu {
+  background-color: #e2e8f0;
+}
+
+body.terang .kartu:hover {
+  background-color: #cbd5e1;
+}
+
+body.terang .kartu h3 {
+  color: #0284c7;
+}
+
+body.terang a {
+  color: #b45309;
+}
+
+body.terang .tombol-cv {
+  color: #0f172a;
+}
+
+body.terang .ikon-kontak {
+  background-color: #e2e8f0;
+}
+
+body.terang .ikon-kontak:hover {
+  background-color: #cbd5e1;
+}
+
+body.terang .ikon-kontak[aria-label="GitHub"] {
+  color: #181717;
+}
+#tombol-tema {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.1rem;
+}

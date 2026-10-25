@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Wildan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Menu navigasi -->
+  <header class="navbar">
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#skill">Skill</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <button id="tombol-tema" aria-label="Ganti tema">
+  <i class="fa-solid fa-sun"></i>
+    </button>
+  </header>
+
+  <!-- Beranda -->
+  <section id="beranda" class="muncul">
+    <img src="foto.jpg" alt="Foto Wildan" class="foto">
+
+    <h1>Halo, saya Wildan</h1>
+    <p>Fresh graduate SMK jurusan TKJ yang ingin belajar cara membuat web.</p>
+
+    <div class="tombol-wadah">
+      <a href="cv.pdf" target="_blank" class="tombol-cv">Lihat CV</a>
+      <a href="cv.pdf" download class="tombol-cv">Unduh CV</a>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="muncul">
+    <h2>Tentang Saya</h2>
+    <p>
+      Saya lulusan SMK jurusan Teknik Komputer dan Jaringan. Saat PKL selama 3 bulan,
+      saya belajar konfigurasi MikroTik, dasar jaringan, dan membuat kabel LAN.
+      Sekarang saya sedang belajar membuat website.
+    </p>
+  </section>
+
+  <!-- Skill -->
+  <section id="skill" class="muncul">
+    <h2>Skill</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>MikroTik</li>
+      <li>Jaringan LAN</li>
+    </ul>
+  </section>
+
+  <!-- Proyek -->
+  <section id="proyek" class="muncul">
+    <h2>Proyek</h2>
+
+    <div class="kartu-wadah">
+      <div class="kartu">
+        <h3>Website Portofolio</h3>
+        <p>Website yang pertama saya buat.</p>
+      </div>
+
+      <div class="kartu">
+        <h3>Proyek Jaringan</h3>
+        <p>Konfigurasi jaringan saat praktik TKJ.</p>
+      </div>
+
+      <div class="kartu">
+        <h3>Pengalaman PKL</h3>
+        <p>Belajar konfigurasi MikroTik, konfigurasi dasar jaringan, membuat kabel LAN, dan lain-lain selama 3 bulan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="muncul">
+    <h2>Kontak</h2>
+    <div class="kontak-wadah">
+      <a href="mailto:wildanhilmimubarok.11@gmail.com" class="ikon-kontak" aria-label="Email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://wa.me/6282320649779" target="_blank" class="ikon-kontak" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://instagram.com/wild4nhilmi_" target="_blank" class="ikon-kontak" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://github.com/wildan969-hub" target="_blank" class="ikon-kontak" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Wildan</p>
+  </footer>
+
+  <!-- Tombol kembali ke atas -->
+  <button id="ke-atas" aria-label="Kembali ke atas">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
