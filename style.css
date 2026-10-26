@@ -1,21 +1,62 @@
+/* ==========================================
+   UBAH WARNA DI SINI SAJA
+   ========================================== */
+
+/* Tema gelap */
+:root {
+  --latar: #0f172a;          /* latar halaman */
+  --teks: #e2e8f0;           /* teks biasa */
+  --judul: #ffffff;          /* judul "Halo, saya Wildan" */
+  --aksen: #38bdf8;          /* tombol, judul kartu */
+  --teks-tombol: #0f172a;    /* teks di dalam tombol */
+  --link: #facc15;           /* warna link */
+  --kartu: #1e293b;          /* latar kartu dan ikon kontak */
+  --kartu-hover: #334155;    /* kartu saat disentuh */
+  --teks-menu: #94a3b8;      /* teks menu atas */
+  --garis: #1e293b;          /* garis bawah menu */
+  --border-foto: #ffffff;    /* garis tepi foto */
+  --ikon-github: #ffffff;    /* ikon GitHub */
+}
+
+/* Tema terang */
+body.terang {
+  --latar: #f8fafc;
+  --teks: #0f172a;
+  --judul: #000000;
+  --aksen: #0284c7;
+  --teks-tombol: #ffffff;
+  --link: #b45309;
+  --kartu: #e2e8f0;
+  --kartu-hover: #cbd5e1;
+  --teks-menu: #475569;
+  --garis: #e2e8f0;
+  --border-foto: #000000;
+  --ikon-github: #181717;
+}
+
+/* ==========================================
+   TAMPILAN (tidak perlu diubah)
+   ========================================== */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: sans-serif;
-  background-color: #0f172a;
-  color: #e2e8f0;
+  background-color: var(--latar);
+  color: var(--teks);
   padding: 80px 20px 20px;
   line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
-  color: #ffffff;
+  color: var(--judul);
 }
 
 a {
-  color: #facc15;
+  color: var(--link);
 }
 
 section {
@@ -35,8 +76,8 @@ section {
   justify-content: space-between;
   gap: 10px;
   padding: 10px 16px;
-  background-color: #0f172a;
-  border-bottom: 1px solid #1e293b;
+  background-color: var(--latar);
+  border-bottom: 1px solid var(--garis);
 }
 
 .navbar nav {
@@ -47,13 +88,13 @@ section {
 }
 
 .navbar nav a {
-  color: #94a3b8;
+  color: var(--teks-menu);
   text-decoration: none;
   font-size: 0.95rem;
 }
 
 .navbar nav a:hover {
-  color: #38bdf8;
+  color: var(--aksen);
 }
 
 /* Foto profil */
@@ -63,7 +104,7 @@ section {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #ffffff;
+  border: 4px solid var(--border-foto);
   margin: 20px 0;
 }
 
@@ -72,17 +113,25 @@ button {
   padding: 10px 18px;
   border: none;
   border-radius: 8px;
-  background-color: #38bdf8;
-  color: #0f172a;
+  background-color: var(--aksen);
+  color: var(--teks-tombol);
   font-weight: bold;
   cursor: pointer;
+}
+
+#tombol-tema {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.1rem;
 }
 
 .tombol-cv {
   display: inline-block;
   padding: 10px 18px;
-  background-color: #38bdf8;
-  color: #0f172a;
+  background-color: var(--aksen);
+  color: var(--teks-tombol);
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
@@ -103,18 +152,18 @@ button {
 }
 
 .kartu {
-  background-color: #1e293b;
+  background-color: var(--kartu);
   padding: 20px;
   border-radius: 30px;
 }
 
 .kartu h3 {
-  color: #38bdf8;
+  color: var(--aksen);
   margin-bottom: 8px;
 }
 
 .kartu:hover {
-  background-color: #334155;
+  background-color: var(--kartu-hover);
 }
 
 /* Ikon kontak */
@@ -132,14 +181,14 @@ button {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: #1e293b;
+  background-color: var(--kartu);
   font-size: 1.5rem;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
 }
 
 .ikon-kontak:hover {
-  background-color: #334155;
+  background-color: var(--kartu-hover);
   transform: translateY(-4px);
 }
 
@@ -160,7 +209,7 @@ button {
 }
 
 .ikon-kontak[aria-label="GitHub"] {
-  color: #ffffff;
+  color: var(--ikon-github);
 }
 
 /* Tombol kembali ke atas */
@@ -200,69 +249,19 @@ footer {
   text-align: center;
   opacity: 0.7;
 }
-
-/* Tema terang */
-body.terang {
-  background-color: #f8fafc;
-  color: #0f172a;
+/* Kotak untuk Tentang dan Skill */
+.kotak {
+  background-color: var(--kartu);
+  padding: 20px;
+  border-radius: 20px;
+  border-left: 4px solid var(--aksen);
 }
 
-body.terang h1 {
-  color: #000000;
+.kotak p {
+  margin: 0;
 }
 
-body.terang .navbar {
-  background-color: #f8fafc;
-  border-bottom-color: #e2e8f0;
-}
-
-body.terang .navbar nav a {
-  color: #475569;
-}
-
-body.terang .navbar nav a:hover {
-  color: #0284c7;
-}
-
-body.terang .foto {
-  border-color: #000000;
-}
-
-body.terang .kartu {
-  background-color: #e2e8f0;
-}
-
-body.terang .kartu:hover {
-  background-color: #cbd5e1;
-}
-
-body.terang .kartu h3 {
-  color: #0284c7;
-}
-
-body.terang a {
-  color: #b45309;
-}
-
-body.terang .tombol-cv {
-  color: #0f172a;
-}
-
-body.terang .ikon-kontak {
-  background-color: #e2e8f0;
-}
-
-body.terang .ikon-kontak:hover {
-  background-color: #cbd5e1;
-}
-
-body.terang .ikon-kontak[aria-label="GitHub"] {
-  color: #181717;
-}
-#tombol-tema {
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 1.1rem;
+.kotak ul {
+  margin: 0;
+  padding-left: 20px;
 }
